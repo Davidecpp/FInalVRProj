@@ -4,9 +4,11 @@ using UnityEngine.AI;
 
 public class RaceAI : MonoBehaviour
 {
-    public Transform goal; 
-    public float jumpForce = 5f; 
-    public float jumpDistance = 2f; 
+    public Transform[] goals; // Array di obiettivi
+    public Transform goal; // Obiettivo attuale
+    public float goalReachedThreshold = 1.0f; // Distanza per considerare l'obiettivo raggiunto
+    public float jumpForce = 5f;
+    public float jumpDistance = 2f;
     public float jumpCooldown = 1f;
 
     private NavMeshAgent agent;
